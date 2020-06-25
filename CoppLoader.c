@@ -20,7 +20,7 @@ readShaderSource(char* shaderPath)
     fseek (fp, 0, SEEK_END);
     length = ftell (fp);
     fseek (fp, 0, SEEK_SET);
-    buffer = malloc (length);
+    buffer = malloc (length + 1);
     if (!buffer)  {
         printf("Failed to allocate memory for source!");
     }
